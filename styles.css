@@ -26,8 +26,16 @@
     box-sizing: border-box;
 }
 
+/* Fix for mobile viewport issues */
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available;
+    }
+}
+
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -36,6 +44,16 @@ body {
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content wrapper to push footer down */
+main {
+    flex: 1;
 }
 
 .container {
@@ -187,7 +205,7 @@ body {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .mobile-menu-btn {
@@ -1335,7 +1353,7 @@ body {
     height: 500px;
     background: var(--dark);
     border-radius: 35px;
-    padding: 10px;
+    padding: 8px;
     box-shadow: var(--shadow-lg);
     position: relative;
 }
@@ -1369,13 +1387,33 @@ body {
 .preview-content {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: flex-start;
+    padding: 40px 20px 20px;
+    gap: 10px;
+}
+
+.ukulele-animation {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 .animated-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
     background: linear-gradient(90deg, #FF6B35, #FFD23F, #7B2CBF, #FF6B35);
@@ -1384,6 +1422,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: gradientMove 3s ease infinite;
+    margin-top: -10px;
 }
 
 @keyframes gradientMove {
@@ -1395,7 +1434,7 @@ body {
 .preview-tabs {
     display: flex;
     justify-content: space-around;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     padding: 10px 5px;
     border-radius: 0 0 18px 18px;
 }
@@ -1405,7 +1444,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
     text-align: center;
 }
 
@@ -1414,7 +1453,8 @@ body {
 }
 
 .tab-text {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 500;
 }
 
 .tab.active {
@@ -1622,6 +1662,10 @@ body {
     .footer-bottom {
         justify-content: center;
         text-align: center;
+    }
+
+    .footer {
+        padding: 40px 20px 20px;
     }
 }
 
@@ -2034,6 +2078,19 @@ body.dark-mode .step-content h3 {
 
 body.dark-mode .download-section {
     background: linear-gradient(135deg, #1A1A2E 0%, #0F0F1A 100%);
+}
+
+body.dark-mode .phone-mockup-download {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+}
+
+body.dark-mode .preview-tabs {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .tab {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 body.dark-mode .btn-secondary {
@@ -2832,7 +2889,7 @@ a.product-item {
 .fullscreen-btn {
     position: absolute;
     top: 10px;
-    right: -4px;
+    right: 8px;
     width: 28px;
     height: 28px;
     background: rgba(255, 255, 255, 0.95);
@@ -2861,7 +2918,7 @@ a.product-item {
 @media (max-width: 768px) {
     .fullscreen-btn {
         top: 8px;
-        right: -2px;
+        right: 6px;
         width: 24px;
         height: 24px;
     }
