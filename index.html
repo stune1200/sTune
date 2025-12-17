@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sTune - ইউকুলেলে শিখুন ও টিউন করুন</title>
+    <meta name="description" content="ইউকুলেলে প্রেমীদের জন্য সেরা অ্যাপ। প্রফেশনাল টিউনার, ইন্টারঅ্যাক্টিভ কোর্স এবং ইউকুলেলে মাস্টার করার জন্য যা কিছু দরকার।">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Music Notes Background -->
+    <div class="floating-notes" aria-hidden="true">
+        <span class="note">♪</span>
+        <span class="note">♫</span>
+        <span class="note">♬</span>
+        <span class="note">♩</span>
+        <span class="note">♪</span>
+        <span class="note">♫</span>
+        <span class="note">♬</span>
+        <span class="note">♩</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🎸</span>
+                <span class="logo-text">sTune</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">ফিচার</a></li>
+                <li><a href="#how-it-works">কিভাবে কাজ করে</a></li>
+                <li><a href="#courses">কোর্স</a></li>
+                <li><a href="#shop">শপ</a></li>
+                <li><a href="#download" class="btn-nav">ডাউনলোড</a></li>
+                <li class="theme-toggle-wrapper">
+                    <!-- Theme Toggle Button -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="থিম পরিবর্তন করুন">
+                        <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <!-- Theme Toggle Button for Mobile -->
+                <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" aria-label="থিম পরিবর্তন করুন">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-btn" aria-label="মেনু টগল করুন">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge animate-fade-in">🎵 #১ ইউকুলেলে অ্যাপ</span>
+                <h1 class="animate-slide-up">
+                    <span class="gradient-text">ইউকুলেলে</span>
+                    শিখুন ও টিউন করুন
+                </h1>
+                <p class="hero-description animate-slide-up-delay">
+                    ইউকুলেলে প্রেমীদের জন্য সেরা সঙ্গী। প্রফেশনাল টিউনার, 
+                    ইন্টারঅ্যাক্টিভ কোর্স এবং ইউকুলেলে মাস্টার করার জন্য যা কিছু দরকার।
+                </p>
+                <div class="hero-buttons animate-slide-up-delay-2">
+                    <a href="#download" class="btn btn-primary">
+                        <span>ফ্রি ডাউনলোড করুন</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">
+                        <span>কিভাবে কাজ করে দেখুন</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-float">
+                <button class="fullscreen-btn" id="openFullscreenDemo" title="ফুলস্ক্রিনে দেখুন">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                    </svg>
+                </button>
+                <div class="phone-mockup interactive-phone">
+                    <div class="phone-screen app-screen">
+                        <!-- Tab Contents -->
+                        <!-- Tuner Tab -->
+                        <div class="tab-content active" id="tunerTab">
+                            <div class="app-header">
+                                <div class="scale-selector" id="scaleSelector">
+                                    <span class="scale-icon">☰</span>
+                                    <div class="scale-info">
+                                        <span class="scale-name" id="currentScaleName">Scale D</span>
+                                        <span class="scale-strings" id="currentScaleStrings">D-A-D-G</span>
+                                    </div>
+                                </div>
+                                <div class="auto-toggle">
+                                    <span>AUTO</span>
+                                    <div class="toggle-switch active">
+                                        <div class="toggle-knob"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tuner-display">
+                                <div class="pitch-indicator">
+                                    <div class="indicator-needle"></div>
+                                </div>
+                                <div class="play-text">Play a string...</div>
+                                <div class="tuner-main-area">
+                                    <div class="string-buttons-left">
+                                        <div class="string-btn" data-note="A" id="stringBtn1">A</div>
+                                        <div class="string-btn" data-note="D" id="stringBtn2">D</div>
+                                    </div>
+                                    <div class="ukulele-svg-container">
+                                        <img src="ukulele.svg" alt="Ukulele" class="ukulele-svg">
+                                    </div>
+                                    <div class="string-buttons-right">
+                                        <div class="string-btn" data-note="D" id="stringBtn3">D</div>
+                                        <div class="string-btn" data-note="G" id="stringBtn4">G</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Scale Selection Panel -->
+                        <div class="tab-content" id="scaleSelectionTab">
+                            <div class="screen-header">
+                                <div class="scale-back-btn" id="scaleBackBtn">Select Tuning</div>
+                            </div>
+                            <div class="scale-tabs">
+                                <div class="scale-tab active" data-scale-tab="favorites">Favorites</div>
+                                <div class="scale-tab" data-scale-tab="allScales">All Scales</div>
+                            </div>
+                            <div class="scale-tab-content active" id="favoritesContent">
+                                <div class="scale-list" id="favoriteScaleList">
+                                    <!-- Favorite scales will be populated by JS -->
+                                </div>
+                            </div>
+                            <div class="scale-tab-content" id="allScalesContent">
+                                <div class="scale-list" id="allScaleList">
+                                    <!-- All scales will be populated by JS -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Courses Tab -->
+                        <div class="tab-content" id="coursesTab">
+                            <div class="screen-header">
+                                <h3>ইউকুলেলে কোর্স</h3>
+                            </div>
+                            <div class="course-list">
+                                <div class="course-item phone-course-item">
+                                    <div class="course-thumb-img">
+                                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=80&h=80&fit=crop&q=80" alt="বিগিনার কোর্স">
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-title">বিগিনার কোর্স</span>
+                                        <span class="course-info">২০ লেসন • ৩ ঘন্টা</span>
+                                    </div>
+                                </div>
+                                <div class="course-item phone-course-item">
+                                    <div class="course-thumb-img">
+                                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=80&h=80&fit=crop&q=80" alt="কর্ড মাস্টারি">
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-title">কর্ড মাস্টারি</span>
+                                        <span class="course-info">৩৫ লেসন • ৫ ঘন্টা</span>
+                                    </div>
+                                </div>
+                                <div class="course-item phone-course-item">
+                                    <div class="course-thumb-img">
+                                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=80&h=80&fit=crop&q=80" alt="অ্যাডভান্সড">
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-title">অ্যাডভান্সড</span>
+                                        <span class="course-info">৪০ লেসন • ৬ ঘন্টা</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Shop Tab -->
+                        <div class="tab-content" id="shopTab">
+                            <div class="screen-header">
+                                <h3>ইউকুলেলে শপ</h3>
+                                <p>সেরা কোয়ালিটির ইউকুলেলে কিনুন</p>
+                            </div>
+                            <div class="product-grid">
+                                <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20সোপ্রানো%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="product-item">
+                                    <div class="product-img-container">
+                                        <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=80&h=80&fit=crop&q=80" alt="সোপ্রানো">
+                                    </div>
+                                    <span class="product-name">সোপ্রানো</span>
+                                    <span class="product-order-btn">অর্ডার</span>
+                                </a>
+                                <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20কনসার্ট%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="product-item">
+                                    <div class="product-img-container">
+                                        <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?w=80&h=80&fit=crop&q=80" alt="কনসার্ট">
+                                    </div>
+                                    <span class="product-name">কনসার্ট</span>
+                                    <span class="product-order-btn">অর্ডার</span>
+                                </a>
+                                <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20টেনর%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="product-item">
+                                    <div class="product-img-container">
+                                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=80&h=80&fit=crop&q=80" alt="টেনর">
+                                    </div>
+                                    <span class="product-name">টেনর</span>
+                                    <span class="product-order-btn">অর্ডার</span>
+                                </a>
+                                <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20ব্যারিটোন%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="product-item">
+                                    <div class="product-img-container">
+                                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=80&h=80&fit=crop&q=80" alt="ব্যারিটোন">
+                                    </div>
+                                    <span class="product-name">ব্যারিটোন</span>
+                                    <span class="product-order-btn">অর্ডার</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Profile Tab -->
+                        <div class="tab-content" id="profileTab">
+                            <div class="profile-content">
+                                <div class="profile-avatar">👤</div>
+                                <span class="profile-name">ইউজার নাম</span>
+                                <span class="profile-email">user@email.com</span>
+                                <div class="profile-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-icon">✓</span>
+                                        <span>Auto Tuning</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-icon">📚</span>
+                                        <span>২টি কোর্স</span>
+                                    </div>
+                                </div>
+                                <div class="social-buttons">
+                                    <a href="https://www.facebook.com/share/1FazRLXBGR/?mibextid=wwXIfr" target="_blank" class="social-btn fb">f</a>
+                                    <a href="https://youtube.com/@sobujserkerukuleledotarastyle?si=3ilwKGNP3Zk-f1k5" target="_blank" class="social-btn yt">▶</a>
+                                    <a href="https://www.tiktok.com/@sobuj.serker.ukul?_r=1&_t=ZS-92H2kLf5TPt" target="_blank" class="social-btn tt">♪</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- In-Phone Modal -->
+                        <div class="phone-modal-overlay" id="phoneModal">
+                            <div class="phone-modal">
+                                <button class="phone-modal-close" id="phoneModalClose">×</button>
+                                <div class="phone-modal-icon">📱</div>
+                                <h4>কোর্স সম্পূর্ণ করতে অ্যাপ ডাউনলোড করুন</h4>
+                                <p>আমাদের সব কোর্স এবং ফিচার উপভোগ করতে sTune অ্যাপ ডাউনলোড করুন। অ্যাপে আপনি ভিডিও লেসন, প্র্যাকটিস সেশন এবং আরও অনেক কিছু পাবেন!</p>
+                                <a href="#download" class="phone-modal-btn" id="phoneModalDownload">
+                                    ডাউনলোড করুন
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Tab Bar -->
+                        <div class="app-tab-bar">
+                            <div class="tab-item active" data-tab="tunerTab">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 2v4m0 12v4M2 12h4m12 0h4"/>
+                                </svg>
+                            </div>
+                            <div class="tab-item" data-tab="coursesTab">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"/>
+                                </svg>
+                            </div>
+                            <div class="tab-item" data-tab="shopTab">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 6h15l-1.5 9h-12z"/>
+                                    <circle cx="9" cy="20" r="1"/>
+                                    <circle cx="18" cy="20" r="1"/>
+                                </svg>
+                            </div>
+                            <div class="tab-item" data-tab="profileTab">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="4"/>
+                                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <span>🎯</span> নিখুঁত টিউনিং
+                </div>
+                <div class="floating-card card-2">
+                    <span>📚</span> দ্রুত শিখুন
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">✨ ফিচার</span>
+                <h2><span class="gradient-text">ইউকুলেলে মাস্টার</span> করতে যা যা দরকার</h2>
+                <p>নতুন এবং অভিজ্ঞ সবার জন্য শক্তিশালী ফিচার</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon tuner-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>প্রফেশনাল টিউনার</h3>
+                    <p>রিয়েল-টাইম পিচ ডিটেকশন সহ অতি-নিখুঁত ক্রোমাটিক টিউনার। প্রতিবার আপনার ইউকুলেলে পারফেক্টলি টিউন করুন।</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon courses-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+                    <h3>ইন্টারঅ্যাক্টিভ কোর্স</h3>
+                    <p>স্ট্রাকচার্ড ভিডিও লেসন দিয়ে বিগিনার থেকে অ্যাডভান্সড পর্যন্ত শিখুন। কর্ড, স্ট্রামিং প্যাটার্ন এবং গান মাস্টার করুন।</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon shop-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                    </div>
+                    <h3>ইউকুলেলে শপ</h3>
+                    <p>কোয়ালিটি সম্পূর্ন ইউকুলেলে ব্রাউজ করুন ও কিনুন। সবকিছু আপনার দোরগোড়ায় ।</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon progress-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>প্রগ্রেস ট্র্যাক করুন</h3>
+                    <p>আপনার শেখার যাত্রা মনিটর করুন। দেখুন আপনি কতদূর এগিয়েছেন!</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon offline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                            <line x1="12" y1="20" x2="12.01" y2="20"/>
+                        </svg>
+                    </div>
+                    <h3>অফলাইনে কাজ করে</h3>
+                    <p>যেকোনো জায়গায়, যেকোনো সময় আপনার ইউকুলেলে টিউন করুন। টিউনার ফিচারের জন্য ইন্টারনেট লাগে না।</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon support-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>কমিউনিটি সাপোর্ট</h3>
+                    <p>ইউকুলেলে প্রেমীদের সাথে যুক্ত হন। সাহায্য নিন, টিপস শেয়ার করুন এবং একসাথে বেড়ে উঠুন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🚀 কিভাবে কাজ করে</span>
+                <h2><span class="gradient-text">৩টি সহজ ধাপে</span> বাজানো শুরু করুন</h2>
+                <p>sTune দিয়ে শুরু করা সহজ এবং মজার</p>
+            </div>
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">১</div>
+                    <div class="step-content">
+                        <h3>ডাউনলোড ও ইনস্টল করুন</h3>
+                        <p>sTune ফ্রি ডাউনলোড করুন। দ্রুত ইনস্টলেশন, কোনো ঝামেলা নেই।</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">📱</div>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg viewBox="0 0 24 40" fill="none">
+                        <path d="M12 0 L12 30 M6 24 L12 30 L18 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="step" data-aos="fade-left">
+                    <div class="step-number">২</div>
+                    <div class="step-content">
+                        <h3>আপনার ইউকুলেলে টিউন করুন</h3>
+                        <p>আমাদের প্রফেশনাল টিউনার ব্যবহার করে আপনার ইন্সট্রুমেন্ট পারফেক্টলি টিউন করুন।</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">🎵</div>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg viewBox="0 0 24 40" fill="none">
+                        <path d="M12 0 L12 30 M6 24 L12 30 L18 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">৩</div>
+                    <div class="step-content">
+                        <h3>শিখুন ও বাজান</h3>
+                        <p>আমাদের কোর্স ফলো করুন, গান শিখুন এবং ইউকুলেলে মাস্টার হয়ে যান!</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">🎸</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Video Preview Section -->
+    <section id="course-video" class="course-video-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🎬 কোর্স প্রিভিউ</span>
+                <h2>দেখুন <span class="gradient-text">কি কি শিখবেন</span></h2>
+                <p>আমাদের কোর্সে কি কি শেখানো হবে তার একটি ঝলক</p>
+            </div>
+            <div class="video-container" data-aos="zoom-in">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/XeUQhMazkwI" 
+                    title="sTune কোর্স প্রিভিউ" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Preview Section -->
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">📚 কোর্স</span>
+                <h2><span class="gradient-text">এক্সপার্ট টিচারদের</span> কাছ থেকে শিখুন</h2>
+                <p>প্রতিটি স্কিল লেভেলের জন্য স্ট্রাকচার্ড কোর্স</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card clickable-course" data-aos="zoom-in">
+                    <div class="course-image beginner">
+                        <span class="course-level">বিগিনার</span>
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=250&fit=crop&q=80" alt="ইউকুলেলে বেসিক কোর্স" loading="lazy">
+                    </div>
+                    <div class="course-info">
+                        <h3>ইউকুলেলে বেসিক</h3>
+                        <p>ফান্ডামেন্টাল দিয়ে আপনার যাত্রা শুরু করুন - ধরা, স্ট্রামিং এবং বেসিক কর্ড।</p>
+                        <div class="course-meta">
+                            <span>📹 ২০টি লেসন</span>
+                            <span>⏱️ ৩ ঘন্টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card clickable-course" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="course-image intermediate">
+                        <span class="course-level">ইন্টারমিডিয়েট</span>
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80" alt="কর্ড মাস্টারি কোর্স" loading="lazy">
+                    </div>
+                    <div class="course-info">
+                        <h3>কর্ড মাস্টারি</h3>
+                        <p>সব মেজর, মাইনর এবং সেভেন্থ কর্ড স্মুথ ট্রানজিশন সহ মাস্টার করুন।</p>
+                        <div class="course-meta">
+                            <span>📹 ৩৫টি লেসন</span>
+                            <span>⏱️ ৫ ঘন্টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card clickable-course" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="course-image advanced">
+                        <span class="course-level">অ্যাডভান্সড</span>
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&q=80" alt="ফিঙ্গারপিকিং প্রো কোর্স" loading="lazy">
+                    </div>
+                    <div class="course-info">
+                        <h3>ফিঙ্গারপিকিং প্রো</h3>
+                        <p>অ্যাডভান্সড টেকনিক, ফিঙ্গারপিকিং প্যাটার্ন এবং কমপ্লেক্স অ্যারেঞ্জমেন্ট।</p>
+                        <div class="course-meta">
+                            <span>📹 ৪০টি লেসন</span>
+                            <span>⏱️ ৬ ঘন্টা</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-cta">
+                <a href="#download" class="btn btn-primary">সব কোর্স দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Preview Section -->
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-badge">🛒 শপ</span>
+                <h2>কোয়ালিটি <span class="gradient-text">ইউকুলেলে ও গিয়ার</span></h2>
+                <p>আপনার ইউকুলেলে যাত্রা শুরু বা আপগ্রেড করতে যা কিছু দরকার</p>
+            </div>
+            <div class="shop-showcase">
+                <div class="shop-item" data-aos="flip-left">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=300&h=300&fit=crop&q=80" alt="সোপ্রানো ইউকুলেলে" loading="lazy">
+                    </div>
+                    <h4>সোপ্রানো ইউকুলেলে</h4>
+                    <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20সোপ্রানো%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="order-btn">অর্ডার করুন</a>
+                </div>
+                <div class="shop-item" data-aos="flip-left" data-aos-delay="100">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?w=300&h=300&fit=crop&q=80" alt="কনসার্ট ইউকুলেলে" loading="lazy">
+                    </div>
+                    <h4>কনসার্ট ইউকুলেলে</h4>
+                    <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20কনসার্ট%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="order-btn">অর্ডার করুন</a>
+                </div>
+                <div class="shop-item" data-aos="flip-left" data-aos-delay="200">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=300&h=300&fit=crop&q=80" alt="টেনর ইউকুলেলে" loading="lazy">
+                    </div>
+                    <h4>টেনর ইউকুলেলে</h4>
+                    <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20টেনর%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="order-btn">অর্ডার করুন</a>
+                </div>
+                <div class="shop-item" data-aos="flip-left" data-aos-delay="300">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop&q=80" alt="ব্যারিটোন ইউকুলেলে" loading="lazy">
+                    </div>
+                    <h4>ব্যারিটোন ইউকুলেলে</h4>
+                    <a href="https://wa.me/8801724281200?text=হ্যালো!%20আমি%20ব্যারিটোন%20ইউকুলেলে%20অর্ডার%20করতে%20চাই।" target="_blank" class="order-btn">অর্ডার করুন</a>
+                </div>
+            </div>
+            <div class="shop-cta">
+                <a href="#download" class="btn btn-secondary">অ্যাপে শপ ব্রাউজ করুন</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text" data-aos="fade-right">
+                    <h2>আপনার <span class="gradient-text">ইউকুলেলে যাত্রা</span> এখনই শুরু করুন।</h2>
+                    <p>এখনই sTune ডাউনলোড করুন এবং অসংখ্য ইউকুলেলে এক্সপার্টদের সাথে যুক্ত হন। শুরু করা ফ্রি!</p>
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn download-apk" id="downloadBtn">
+                            <svg viewBox="0 0 24 24" width="30" height="30">
+                                <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+                            </svg>
+                            <div class="store-text">
+                                <span>ফ্রি ডাউনলোড</span>
+                                <strong>অ্যাপ ডাউনলোড করুন</strong>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="download-features">
+                        <span>✓ ফ্রি ডাউনলোড</span>
+                        <span>✓ টিউনারে কোনো বিজ্ঞাপন নেই</span>
+                        <span>✓ অফলাইন মোড</span>
+                    </div>
+                </div>
+                <div class="download-visual" data-aos="fade-left">
+                    <div class="phone-mockup-download">
+                        <div class="app-preview">
+                            <div class="preview-header">
+                                <span class="app-name">sTune</span>
+                            </div>
+                            <div class="preview-content">
+                                <div class="ukulele-animation">🎸</div>
+                                <p class="animated-text">আপনার যাত্রা শুরু করুন</p>
+                            </div>
+                            <div class="preview-tabs">
+                                <div class="tab active">
+                                    <span class="tab-icon">🎵</span>
+                                    <span class="tab-text">টিউনার</span>
+                                </div>
+                                <div class="tab">
+                                    <span class="tab-icon">📚</span>
+                                    <span class="tab-text">শিখুন</span>
+                                </div>
+                                <div class="tab">
+                                    <span class="tab-icon">🛒</span>
+                                    <span class="tab-text">শপ</span>
+                                </div>
+                                <div class="tab">
+                                    <span class="tab-icon">👤</span>
+                                    <span class="tab-text">প্রোফাইল</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🎸</span>
+                        <span class="logo-text">sTune</span>
+                    </a>
+                    <p>ইউকুলেলে শিখুন ও টিউন করুন - আপনার সেরা ইউকুলেলে সঙ্গী অ্যাপ।</p>
+                    <div class="social-links">
+                        <!-- YouTube -->
+                        <a href="https://youtube.com/@sobujserkerukuleledotarastyle?si=3ilwKGNP3Zk-f1k5" target="_blank" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1FazRLXBGR/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@sobuj.serker.ukul?_r=1&_t=ZS-92H2kLf5TPt" target="_blank" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>অ্যাপ</h4>
+                        <ul>
+                            <li><a href="#features">ফিচার</a></li>
+                            <li><a href="#courses">কোর্স</a></li>
+                            <li><a href="#shop">শপ</a></li>
+                            <li><a href="#download">ডাউনলোড</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>সাপোর্ট</h4>
+                        <ul>
+                            <li><a href="https://wa.me/8801724281200" target="_blank">যোগাযোগ করুন</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ sTune - ইউকুলেলে শিখুন ও টিউন করুন। সর্বস্বত্ব সংরক্ষিত।</p>
+                <p>ইউকুলেলে প্রেমীদের জন্য ❤️ দিয়ে তৈরি প্লাটফর্ম</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Modal -->
+    <div class="course-modal-overlay" id="courseModal">
+        <div class="course-modal">
+            <button class="course-modal-close" id="courseModalClose">×</button>
+            <div class="course-modal-icon">📱</div>
+            <h3>কোর্স সম্পূর্ণ করতে অ্যাপ ডাউনলোড করুন</h3>
+            <p>আমাদের সব কোর্স এবং ফিচার উপভোগ করতে sTune অ্যাপ ডাউনলোড করুন। অ্যাপে আপনি ভিডিও লেসন, প্র্যাকটিস সেশন এবং আরও অনেক কিছু পাবেন!</p>
+            <a href="#download" class="btn btn-primary" id="courseModalDownload">
+                <span>ডাউনলোড করুন</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div class="image-zoom-overlay" id="imageZoomModal">
+        <div class="image-zoom-container">
+            <button class="image-zoom-close" id="imageZoomClose">×</button>
+            <img src="" alt="Product Image" id="zoomedImage">
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8801724281200" target="_blank" class="whatsapp-float" aria-label="WhatsApp এ মেসেজ করুন">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
