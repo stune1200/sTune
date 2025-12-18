@@ -353,8 +353,8 @@ main {
 }
 
 .phone-mockup {
-    width: 280px;
-    height: 560px;
+    width: 320px;
+    height: 640px;
     background: var(--dark);
     border-radius: 40px;
     padding: 6px;
@@ -366,13 +366,14 @@ main {
 .phone-mockup::before {
     content: '';
     position: absolute;
-    top: 15px;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 25px;
+    width: 100px;
+    height: 28px;
     background: #000;
     border-radius: 20px;
+    z-index: 100;
 }
 
 .phone-screen {
@@ -1839,8 +1840,8 @@ main {
     }
 
     .phone-mockup {
-        width: 300px;
-        height: 600px;
+        width: 320px;
+        height: 640px;
     }
 
     .floating-card {
@@ -1914,8 +1915,8 @@ main {
     }
 
     .phone-mockup {
-        width: 280px;
-        height: 560px;
+        width: 300px;
+        height: 600px;
     }
 
     .tuner-note {
@@ -2382,50 +2383,50 @@ body.dark-mode .note {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 15px 15px;
+    padding: 45px 12px 15px;
     flex: 1;
 }
 
 .profile-avatar {
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.1));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
 }
 
 .profile-name {
     color: white;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .profile-email {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
     margin-bottom: 15px;
 }
 
 .profile-stats {
     width: 100%;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 12px;
-    margin-bottom: 15px;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
 }
 
 .stat-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.55rem;
-    margin-bottom: 8px;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
 }
 
 .stat-item:last-child {
@@ -2433,15 +2434,15 @@ body.dark-mode .note {
 }
 
 .stat-icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     background: rgba(76, 175, 80, 0.2);
-    border-radius: 6px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #4CAF50;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 /* Social Card */
@@ -2456,8 +2457,8 @@ body.dark-mode .note {
 
 .social-card-title {
     display: block;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.75rem;
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
@@ -2470,15 +2471,13 @@ body.dark-mode .note {
 }
 
 .social-btn {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 0.8rem;
-    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
@@ -2490,21 +2489,21 @@ body.dark-mode .note {
 }
 
 .social-btn.fb {
-    background: linear-gradient(135deg, #1877F2 0%, #0d5bbd 100%);
-    color: white;
+    background: #1877F2;
 }
 
 .social-btn.yt {
-    background: linear-gradient(135deg, #FF0000 0%, #cc0000 100%);
-    color: white;
+    background: #FF0000;
 }
 
 .social-btn.tt {
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
-    color: white;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .social-btn svg {
+    width: 20px;
+    height: 20px;
     fill: white;
 }
 
@@ -2521,20 +2520,24 @@ body.dark-mode .note {
 /* ===== Scale Selection Panel Styles ===== */
 .scale-back-btn {
     color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 600;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     transition: all 0.3s;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .scale-back-btn::before {
-    content: '←';
-    color: #4CAF50;
-    font-size: 0.6rem;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    transform: rotate(45deg);
 }
 
 .scale-back-btn:hover {
@@ -2542,7 +2545,7 @@ body.dark-mode .note {
 }
 
 #scaleSelectionTab .screen-header {
-    padding: 35px 12px 5px;
+    padding: 35px 12px 8px;
 }
 
 #scaleSelectionTab .screen-header h3 {
@@ -2552,15 +2555,15 @@ body.dark-mode .note {
 .scale-tabs {
     display: flex;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    margin: 0 10px 6px;
+    margin: 0 10px 10px;
 }
 
 .scale-tab {
     flex: 1;
     text-align: center;
-    padding: 6px 5px;
+    padding: 8px 5px;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 0.5rem;
+    font-size: 0.65rem;
     font-weight: 600;
     cursor: pointer;
     position: relative;
@@ -2584,7 +2587,7 @@ body.dark-mode .note {
 .scale-tab-content {
     display: none;
     padding: 0 10px;
-    max-height: calc(100% - 90px);
+    max-height: calc(100% - 100px);
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -2601,14 +2604,14 @@ body.dark-mode .note {
 .scale-list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
 
 .scale-item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 10px;
+    padding: 10px 12px;
     cursor: pointer;
     transition: all 0.3s;
     position: relative;
@@ -2620,53 +2623,78 @@ body.dark-mode .note {
 
 .scale-item.selected {
     border-color: #4CAF50;
-    background: rgba(76, 175, 80, 0.1);
+    background: rgba(76, 175, 80, 0.15);
 }
 
 .scale-item-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
+}
+
+.scale-item-left {
+    flex: 1;
 }
 
 .scale-item-name {
     color: #4CAF50;
-    font-size: 0.55rem;
+    font-size: 0.7rem;
     font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
 }
 
 .scale-item-desc {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.45rem;
-    margin-bottom: 4px;
+    font-size: 0.55rem;
+    display: block;
+    margin-bottom: 6px;
 }
 
 .scale-item-notes {
     display: flex;
-    gap: 3px;
+    gap: 5px;
     flex-wrap: wrap;
 }
 
 .scale-note-tag {
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 0.4rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+
+/* Scale item actions - same row */
+.scale-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.scale-selected-icon {
+    color: #4CAF50;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
 }
 
 .scale-favorite-btn {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 1.6rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s;
-    padding: 8px;
-    min-width: 36px;
-    min-height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 24px;
+    height: 24px;
 }
 
 .scale-favorite-btn.favorited {
@@ -2677,23 +2705,30 @@ body.dark-mode .note {
     transform: scale(1.2);
 }
 
+/* Drag handle - 6 dots grid style */
 .scale-drag-handle {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 3px;
     cursor: grab;
-    padding: 8px;
-    min-width: 32px;
-    min-height: 32px;
-    align-items: center;
-    justify-content: center;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    margin-top: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scale-drag-handle span {
-    width: 18px;
-    height: 3px;
+    width: 4px;
+    height: 4px;
     background: rgba(255, 255, 255, 0.4);
-    border-radius: 2px;
+    border-radius: 50%;
+}
+
+.scale-drag-handle:hover {
+    background: rgba(76, 175, 80, 0.2);
 }
 
 .scale-drag-handle:hover span {
@@ -2866,28 +2901,7 @@ a.product-item {
 }
 
 
-/* ===== Updated Scale Back Button ===== */
-.scale-back-btn {
-    color: white;
-    font-size: 0.85rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
-.scale-back-btn::before {
-    content: '←';
-    color: #4CAF50;
-    font-size: 0.7rem;
-}
-
-.scale-back-btn:hover {
-    color: #4CAF50;
-}
 
 /* ===== Course Thumb Image ===== */
 .course-thumb-img {
@@ -2949,45 +2963,9 @@ a.product-item {
     flex: 1;
 }
 
-/* ===== Scale Drag Handle ===== */
-.scale-drag-handle {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    cursor: grab;
-    padding: 5px;
-    margin-left: 8px;
-}
 
-.scale-drag-handle span {
-    width: 14px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 1px;
-}
 
-.scale-drag-handle:hover span {
-    background: #4CAF50;
-}
 
-.scale-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.scale-item-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-}
-
-.scale-selected-icon {
-    color: #4CAF50;
-    font-size: 1rem;
-    margin-right: 15px;
-}
 
 
 /* ===== Fullscreen Demo Button ===== */
@@ -3153,8 +3131,8 @@ a.product-item {
 
 /* ===== Dark Mode Phone Mockup Adjustments ===== */
 body.dark-mode .phone-mockup {
-    padding: 4px;
-    background: #2a2a3e;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 /* ===== Hide Scrollbar in Phone Screen ===== */
