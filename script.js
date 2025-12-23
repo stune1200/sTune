@@ -310,15 +310,13 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ===== Download Button - GitHub APK Link =====
+// ===== Download Button - Direct APK Download =====
 const downloadBtn = document.getElementById('downloadBtn');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        // GitHub releases page এ redirect করবে - আপনার GitHub repo link দিন
-        window.open('https://github.com/YOUR_USERNAME/sTune/releases/latest', '_blank');
-        // অথবা সরাসরি APK link দিতে পারেন:
-        // window.location.href = 'https://github.com/YOUR_USERNAME/sTune/releases/download/v1.0.0/sTune.apk';
+        // Github apk link
+        window.location.href = 'https://github.com/stune1200/sTune_App/raw/main/sTune.apk';
     });
 }
 
