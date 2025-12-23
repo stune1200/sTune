@@ -316,7 +316,7 @@ if (downloadBtn) {
     downloadBtn.addEventListener('click', function(e) {
         e.preventDefault();
         // Github apk link
-        window.location.href = 'https://github.com/stune1200/sTune_App/raw/main/sTune.apk';
+        window.location.href = 'https://github.com/stune1200/sTune_App/releases/download/v1.0.0/sTune.apk';
     });
 }
 
@@ -641,3 +641,4 @@ document.addEventListener('keydown', (e) => {
         document.body.style.overflow = '';
     }
 });
+
